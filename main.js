@@ -28,16 +28,27 @@
 
 // console.log(arr[0][1]);
 
-let users = [
-    {id:1, name: "vasya", age: 31, status: true, skills: ['html', 'mysql', 'mongo']},
-    {id:2, name: "petya", age: 33, status: false, skills: ['html', 'js']},
-    {id:3, name: "anna", age: 28, status: true, skills: ['html', 'js']},
-    {id:4, name: "olya", age: 29, status: false, skills: ['html', 'mysql', 'mongo']},
-]
-console.log(users);
-console.log(users[0].age);
-console.log(users[0].skills[2]);
-console.log(users[0]['skills'][2]);
+// let users = [
+//     {id:1, name: "vasya", age: 31, status: true, skills: ['html', 'mysql', 'mongo']},
+//     {id:2, name: "petya", age: 33, status: false, skills: ['html', 'js']},
+//     {id:3, name: "anna", age: 28, status: true, skills: ['html', 'js']},
+//     {id:4, name: "olya", age: 29, status: false, skills: ['html', 'mysql', 'mongo']},
+// ]
+// console.log(users);
+// console.log(users[0].age);
+// console.log(users[0].skills[2]);
+// console.log(users[0]['skills'][2]);
 
-An array of objects
+let user = {
+  id: 1,
+  name: "vasya",
+};
+
+user.age = 22;
+user['status'] = false;
+console.log(user);
+
+delete user.id;
+console.log(user);
+
 
