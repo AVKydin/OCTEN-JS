@@ -81,18 +81,32 @@
 //     alert('підрости');
 // }
 
-let color = prompt('enter color');
-let b = confirm("is road clear?");
-if (color === 'green' && b) {
-     console.log("go"); 
+// let color = prompt('enter color');
+// let b = confirm("is road clear?");
+// if (color === 'green' && b) {
+//      console.log("go");
    
-} else if (color === 'yellow') {
-    console.log('wait');
-} else if(color === 'red'){
-    console.log("stop");
-} else {
-    console.log("???");
+// } else if (color === 'yellow') {
+//     console.log('wait');
+// } else if(color === 'red'){
+//     console.log("stop");
+// } else {
+//     console.log("???");
     
+// }
+
+let color = prompt('enter color');
+
+switch (color) {
+  case "green":
+    console.log("go");
+    break;
+  case "yellow":
+    console.log("wait");
+    break;
+  case "red":
+    console.log("stop");
+    break;
+  default:
+      console.log("???");
 }
-
-
