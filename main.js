@@ -95,18 +95,47 @@
     
 // }
 
-let color = prompt('enter color');
+// let color = prompt('enter color');
 
-switch (color) {
-  case "green":
-    console.log("go");
-    break;
-  case "yellow":
-    console.log("wait");
-    break;
-  case "red":
-    console.log("stop");
-    break;
-  default:
-      console.log("???");
-}
+// switch (color) {
+//   case "green":
+//     console.log("go");
+//     break;
+//   case "yellow":
+//     console.log("wait");
+//     break;
+//   case "red":
+//     console.log("stop");
+//     break;
+//   default:
+//       console.log("???");
+// }
+
+// let x = 0;
+// x = x + 1;
+// console.log(x);
+// x++
+// console.log(x);
+// x += 1;
+// console.log(x);
+
+// x = x - 1;
+// console.log(x);
+
+// x--;
+// console.log(x);
+
+// x -= 1;
+// console.log(x);
+
+
+// let x = 0;
+// x++;
+// console.log(x);
+
+// ++x
+// console.log(x);
+
+let a = 0;
+let b = ++a;
+console.log(a, b);
