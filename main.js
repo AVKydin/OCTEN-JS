@@ -28,3 +28,19 @@
 
 // console.log(arr[0][1]);
 
+let user1 = {
+    id: 1,
+    name: 'Vasia',
+    age: 31,
+    skills: ['html', 'java', 'js'],
+    wife: {
+        name: 'olya',
+        age: 28
+    }
+}
+console.log(user1);
+console.log(user1.id);
+console.log(user1["age"]);
+console.log(user1.skills);
+console.log(user1.skills[2]);
+console.log(user1.wife.name);
