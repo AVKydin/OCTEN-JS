@@ -52,14 +52,47 @@
 // console.log(user);
 
 
-let user = {
-    name: 'vasya',
-}
+// let user = {
+//     name: 'vasya',
+// }
 
-let user2 = user;
-console.log(user2);
-user2.age = 31;
-console.log(user2);
-console.log(user);
+// let user2 = user;
+// console.log(user2);
+// user2.age = 31;
+// console.log(user2);
+// console.log(user);
+
+
+// let color = 'green'
+// if (color === 'red') {
+//   console.log("stop");
+// } else {
+//   console.log("go");
+    
+// }
+
+
+// let age = +prompt('enter your age');
+// console.log(age, typeof age);
+
+// if (age >= 18) {
+//     alert('go');
+// } else {
+//     alert('підрости');
+// }
+
+let color = prompt('enter color');
+let b = confirm("is road clear?");
+if (color === 'green' && b) {
+     console.log("go"); 
+   
+} else if (color === 'yellow') {
+    console.log('wait');
+} else if(color === 'red'){
+    console.log("stop");
+} else {
+    console.log("???");
+    
+}
 
 
