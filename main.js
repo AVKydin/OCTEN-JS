@@ -39,16 +39,27 @@
 // console.log(users[0].skills[2]);
 // console.log(users[0]['skills'][2]);
 
+// let user = {
+//   id: 1,
+//   name: "vasya",
+// };
+
+// user.age = 22;
+// user['status'] = false;
+// console.log(user);
+
+// delete user.id;
+// console.log(user);
+
+
 let user = {
-  id: 1,
-  name: "vasya",
-};
+    name: 'vasya',
+}
 
-user.age = 22;
-user['status'] = false;
-console.log(user);
-
-delete user.id;
+let user2 = user;
+console.log(user2);
+user2.age = 31;
+console.log(user2);
 console.log(user);
 
 
