@@ -410,11 +410,23 @@
 //   return a + b;
 // }
 
-let calc = (a, b) => a + b;
+// let calc = (a, b) => a + b;
 
-console.log(calc(10, 20));
+// console.log(calc(10, 20));
 
-let asd = () => console.log(arguments);
+// let asd = () => console.log(arguments);
 
-console.log(asd());
+// console.log(asd());
+
+let user = {
+  name: 'vasya',
+  age: 31,
+    greeting: function (msg) {
+      return `${msg} my name is ${this.name}`
+  },
+    vitanny: (msg) => `${msg} my age is ${user.age}`
+}
+console.log(user.greeting("hi"));
+console.log(user.vitanny("hello"));
+
 
