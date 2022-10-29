@@ -245,6 +245,49 @@
 //   }
 // }
 
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
+// let i = 0;
+
+// while (i < users.length) {
+//   console.log(users[i]);
+//   i++;
+// }
+
+// do {
+//   console.log('sdfsdfsdfsdfsdf');
+
+// } while (false);
+
+
+// function writer(productTitle, price, descr) {
+//   document.write(
+//     `<div>
+//       <h2>${productTitle} ${price} </h2>
+//       <p>${descr}</p>
+//     </div>`
+//   );
+// }
+// writer("milk", 23, "some milk");
+// writer("meat", 150, "some meat");
+
+function printerArr(array) {
+  for (const item of array) {
+    console.log(item);
+  }
+}
+
 let users = [
   { name: "vasya", age: 31, status: false },
   { name: "petya", age: 28, status: true },
@@ -258,15 +301,31 @@ let users = [
   { name: "olya", age: 17, status: false },
   { name: "max", age: 26, status: true },
 ];
-// let i = 0;
 
-// while (i < users.length) {
-//   console.log(users[i]);
-//   i++;
-// }
+printerArr(users);
 
-do {
-  console.log('sdfsdfsdfsdfsdf');
+let products = [
+  {
+    title: "milk",
+    price: 22,
+    image: "dcgdfsgdfgdf",
+  },
+  {
+    title: "juice",
+    price: 27,
+    image: "xzc",
+  },
+  {
+    title: "tomato",
+    price: 47,
+    image: "wqewqeqwe",
+  },
+  {
+    title: "tea",
+    price: 15,
+    image: "hjkhjkhj",
+  },
+];
 
-} while (false);
+printerArr(products);
 
