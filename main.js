@@ -351,31 +351,46 @@
 // console.log(number);
 
 
-function userFilter(users) {
-  let filteredUsers = [];
-  for (const user of users) {
-    if (user.age > 30) {
-      console.log(user);
-      filteredUsers.push(user);
-    }
+// function userFilter(users) {
+//   let filteredUsers = [];
+//   for (const user of users) {
+//     if (user.age > 30) {
+//       console.log(user);
+//       filteredUsers.push(user);
+//     }
+//   }
+//   return filteredUsers;
+// }
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
+// let filter = userFilter(users);
+//       console.log(filter);
+
+// function calc(a, b) {
+//   return a + b;
+// }
+// function calc(a, b, c) {
+//   return a + b + c;
+// }
+
+function foobar() {
+  console.log(arguments)
+  if (arguments.length === 2) {
+    return arguments[0] + arguments[1]
+  } else if (arguments.length === 3) {
+    return arguments[0] + arguments[1] +arguments[2];
   }
-  return filteredUsers;
 }
-let users = [
-  { name: "vasya", age: 31, status: false },
-  { name: "petya", age: 28, status: true },
-  { name: "kolya", age: 22, status: true },
-  { name: "olya", age: 27, status: false },
-  { name: "max", age: 23, status: true },
-  { name: "anya", age: 35, status: false },
-  { name: "oleg", age: 34, status: false },
-  { name: "andrey", age: 29, status: true },
-  { name: "masha", age: 40, status: true },
-  { name: "olya", age: 17, status: false },
-  { name: "max", age: 26, status: true },
-];
-let filter = userFilter(users);
-      console.log(filter);
-
-
+  console.log(foobar(1,2,55));
       
