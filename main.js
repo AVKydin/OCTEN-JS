@@ -395,15 +395,26 @@
 //   console.log(foobar(1,2,55));
 
 
-// greeting()      
+// greeting()
 // let greeting = function () {
 //     console.log('hi');
 // }
 
-greeting();      
+// greeting();
 
-function greeting() {
-  console.log("hi");
-}
+// function greeting() {
+//   console.log("hi");
+// }
 
+// function calc(a, b) {
+//   return a + b;
+// }
+
+let calc = (a, b) => a + b;
+
+console.log(calc(10, 20));
+
+let asd = () => console.log(arguments);
+
+console.log(asd());
 
