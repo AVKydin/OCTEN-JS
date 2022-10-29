@@ -429,8 +429,8 @@
 // console.log(user.greeting("hi"));
 // console.log(user.vitanny("hello"));
 
-let str = 'hello octen';
-console.log(str);
+// let str = 'hello octen';
+// console.log(str);
 // console.log(str[0]);
 // for (const iterator of str) {
 //   console.log(iterator);
@@ -440,20 +440,64 @@ console.log(str);
 
 // let s = str.concat('!!!');
 // console.log(s);
-console.log(str.toLocaleUpperCase()); 
+// console.log(str.toLocaleUpperCase()); 
 
-console.log(str.startsWith("hel"));
+// console.log(str.startsWith("hel"));
 
-console.log(str.endsWith("hel")); 
+// console.log(str.endsWith("hel")); 
 
-console.log(str.substring(0, 7));
-console.log(str.indexOf("o"));
-console.log(str.lastIndexOf("o"));
-console.log(str.indexOf("o", 5));
-console.log(str.charAt(8));
-console.log(str.replace('e', '!')); 
-console.log(str.replaceAll("e", "!")); 
-console.log(str.split(" ")); 
+// console.log(str.substring(0, 7));
+// console.log(str.indexOf("o"));
+// console.log(str.lastIndexOf("o"));
+// console.log(str.indexOf("o", 5));
+// console.log(str.charAt(8));
+// console.log(str.replace('e', '!')); 
+// console.log(str.replaceAll("e", "!")); 
+// console.log(str.split(" ")); 
+
+let arr = [];
+console.log(typeof(arr));
+
+// arr[arr.length] = 'dasdfdfsd';
+arr.push('dsfsd');
+console.log(arr.push("dgfhfg"));
+console.log(arr.push("dgfhfg2"));
+console.log(arr.push("dgfhfg3"));
+console.log(arr.push("dgfhfg4"));
+console.log(arr.push("dgfhfg5"));
+console.log(arr);
+
+console.log( arr.pop());
+console.log(arr);
+
+console.log(arr.unshift("!!!"));
+console.log(arr);
+
+console.log(arr.shift("!!!"));
+console.log(arr);
 
 
+console.log(arr.join(';'));
 
+let nums = [1, 2, 32];
+
+let concat = arr.concat(nums);
+console.log(concat);
+
+console.log(nums.reverse());
+
+console.log(concat);
+
+let slice = concat.slice(0, 4)
+// concat.slice(0,4)
+console.log(slice);
+
+// let splice = concat.splice(0,2, 'gdfgdf', 'hkjhhj,', 11111)
+// console.log(concat.splice(0));
+// console.log(splice);
+console.log(concat);
+
+console.log(concat.indexOf(1));
+
+concat.includes(1);
+console.log(concat.includes(1));
