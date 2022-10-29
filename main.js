@@ -418,15 +418,42 @@
 
 // console.log(asd());
 
-let user = {
-  name: 'vasya',
-  age: 31,
-    greeting: function (msg) {
-      return `${msg} my name is ${this.name}`
-  },
-    vitanny: (msg) => `${msg} my age is ${user.age}`
-}
-console.log(user.greeting("hi"));
-console.log(user.vitanny("hello"));
+// let user = {
+//   name: 'vasya',
+//   age: 31,
+//     greeting: function (msg) {
+//       return `${msg} my name is ${this.name}`
+//   },
+//     vitanny: (msg) => `${msg} my age is ${user.age}`
+// }
+// console.log(user.greeting("hi"));
+// console.log(user.vitanny("hello"));
+
+let str = 'hello octen';
+console.log(str);
+// console.log(str[0]);
+// for (const iterator of str) {
+//   console.log(iterator);
+// }
+// let s = new String('dsfsdfsdfsd');
+// console.log(s);
+
+// let s = str.concat('!!!');
+// console.log(s);
+console.log(str.toLocaleUpperCase()); 
+
+console.log(str.startsWith("hel"));
+
+console.log(str.endsWith("hel")); 
+
+console.log(str.substring(0, 7));
+console.log(str.indexOf("o"));
+console.log(str.lastIndexOf("o"));
+console.log(str.indexOf("o", 5));
+console.log(str.charAt(8));
+console.log(str.replace('e', '!')); 
+console.log(str.replaceAll("e", "!")); 
+console.log(str.split(" ")); 
+
 
 
