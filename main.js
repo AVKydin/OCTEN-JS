@@ -282,12 +282,85 @@
 // writer("milk", 23, "some milk");
 // writer("meat", 150, "some meat");
 
-function printerArr(array) {
-  for (const item of array) {
-    console.log(item);
-  }
-}
+// function printerArr(array) {
+//   for (const item of array) {
+//     console.log(item);
+//   }
+// }
 
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
+
+// printerArr(users);
+
+// let products = [
+//   {
+//     title: "milk",
+//     price: 22,
+//     image: "dcgdfsgdfgdf",
+//   },
+//   {
+//     title: "juice",
+//     price: 27,
+//     image: "xzc",
+//   },
+//   {
+//     title: "tomato",
+//     price: 47,
+//     image: "wqewqeqwe",
+//   },
+//   {
+//     title: "tea",
+//     price: 15,
+//     image: "hjkhjkhj",
+//   },
+// ];
+
+// printerArr(products);
+
+// function calc(a, b) {
+//   let result = a + b;
+//   return result;
+// }
+
+// r1 = calc(10, 20);
+// r2 = calc(20, 22);
+
+// console.log(r1,r2)
+
+// function persent(sum, per) {
+//   return (sum / 100) * per;
+// }
+
+// function tax(sum) {
+//   return sum - persent(sum, 20) - persent(sum, 1.5);
+   
+// }
+// let number = tax(10000);
+// console.log(number);
+
+
+function userFilter(users) {
+  let filteredUsers = [];
+  for (const user of users) {
+    if (user.age > 30) {
+      console.log(user);
+      filteredUsers.push(user);
+    }
+  }
+  return filteredUsers;
+}
 let users = [
   { name: "vasya", age: 31, status: false },
   { name: "petya", age: 28, status: true },
@@ -301,31 +374,8 @@ let users = [
   { name: "olya", age: 17, status: false },
   { name: "max", age: 26, status: true },
 ];
+let filter = userFilter(users);
+      console.log(filter);
 
-printerArr(users);
 
-let products = [
-  {
-    title: "milk",
-    price: 22,
-    image: "dcgdfsgdfgdf",
-  },
-  {
-    title: "juice",
-    price: 27,
-    image: "xzc",
-  },
-  {
-    title: "tomato",
-    price: 47,
-    image: "wqewqeqwe",
-  },
-  {
-    title: "tea",
-    price: 15,
-    image: "hjkhjkhj",
-  },
-];
-
-printerArr(products);
-
+      
