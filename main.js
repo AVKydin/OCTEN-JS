@@ -630,3 +630,84 @@
 
 // user?.name?.Fn;
 
+// let name = 'vasya';
+// let age = 31;
+
+// let user = {
+//   name,
+//   age,
+//   foo() {
+//     console.log(this);
+//   }
+// }
+// console.log(user);
+// user.foo()
+
+// let user = {
+//   name: 'vasya',
+//   age: 31,
+//   foo() {
+//     console.log(this);
+//   },
+// };
+// let { age, name } = user;
+
+// console.log(name);
+// console.log(age);
+
+
+// function asd({ name }){
+//   console.log(name);
+// }
+
+// asd({a:'sddf',name: 'dfsdfsd'})
+
+
+// let name = "vasya";
+// let age = 31;
+
+// let user = {
+//   name,
+//   age,
+//   foo() {
+//     console.log(this);
+//   },
+//   wife: {
+//     name: 'anna',
+//   }
+// };
+// console.log(user);
+// user.foo()
+
+// let { name: nameUser, age: ageUser, wife:{name:wifeName} } = user;
+// console.log(nameUser);
+// console.log(wifeName);
+
+
+// let nambers = [
+//   11,
+//   22,
+//   33,
+// ]
+
+// let [a, , c] = nambers;
+// console.log(a, c);
+
+let users = [
+  { name: "vasya", age: 31, status: false },
+  { name: "petya", age: 28, status: true },
+  { name: "kolya", age: 22, status: true },
+  { name: "olya", age: 27, status: false },
+  { name: "max", age: 23, status: true },
+  { name: "anya", age: 35, status: false },
+  { name: "oleg", age: 34, status: false },
+  { name: "andrey", age: 29, status: true },
+  { name: "masha", age: 40, status: true },
+  { name: "olya", age: 17, status: false },
+  { name: "max", age: 26, status: true },
+];
+
+let [{name, age, status}, user2] = users;
+
+console.log(name);
+console.log(user2);
