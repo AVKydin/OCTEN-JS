@@ -1023,10 +1023,13 @@
 // console.log(target.outerHTML);
 
 
-let elementsByClassName = document.getElementsByClassName('point');
+// let elementsByClassName = document.getElementsByClassName('point');
 
-for (const iterator of elementsByClassName) {
-  iterator.innerText = "dfssdfdsfsdf";
-  iterator.classList.add("sdf");
-}
+// for (const iterator of elementsByClassName) {
+//   iterator.innerText = "dfssdfdsfsdf";
+//   iterator.classList.add("sdf");
+// }
+
+console.log(document.forms.f1.userName);
+console.log(document.forms.f2.userEmail);
 
