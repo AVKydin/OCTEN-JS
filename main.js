@@ -992,3 +992,41 @@
 // console.log(i);
 
 // }
+
+// let target = document.getElementById('target')
+// console.log(target);
+// console.log(target.innerText);
+// // target.innerText = 'octen'
+
+// target.style.background = 'silver';
+// console.log(target.classList);
+// target.classList.add("foo");
+// target.classList.add("bar");
+// console.log(target.classList.keys());
+// console.log(target.classList.item(0));
+// console.log(target.classList.contains("bar"));
+// console.log(target.classList.toggle("bar"));
+// console.log(target.classList.toggle("asd"));
+
+// console.log(target.getAttribute("xxx"));
+// console.log(target.getAttribute("id"));
+// console.log(target.setAttribute("id", 'dsfgfdsgdf'));
+
+// console.log(target.previousElementSibling);
+// console.log(target.nextElementSibling);
+// console.log(target.children);
+// console.log(target.childNodes);
+
+
+// target.innerHTML = `<b>dsfsdfsdfsd</b>`;
+
+// console.log(target.outerHTML);
+
+
+let elementsByClassName = document.getElementsByClassName('point');
+
+for (const iterator of elementsByClassName) {
+  iterator.innerText = "dfssdfdsfsdf";
+  iterator.classList.add("sdf");
+}
+
