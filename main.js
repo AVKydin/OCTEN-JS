@@ -1059,30 +1059,74 @@
 // }
 
 
- let users = [
-  { name: "vasya", age: 31, status: false },
-  { name: "petya", age: 28, status: true },
-  { name: "kolya", age: 22, status: true },
-  { name: "olya", age: 27, status: false },
-  { name: "max", age: 23, status: true },
-  { name: "anya", age: 35, status: false },
-  { name: "oleg", age: 34, status: false },
-  { name: "andrey", age: 29, status: true },
-  { name: "masha", age: 40, status: true },
-  { name: "olya", age: 17, status: false },
-  { name: "max", age: 26, status: true },
-];
+//  let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
 
-for (const user of users) {
-  let userInfoDiv = document.createElement('div');
-  let h2 = document.createElement('h2');
-  h2.innerText = user.name;
+// for (const user of users) {
+//   let userInfoDiv = document.createElement('div');
+//   let h2 = document.createElement('h2');
+//   h2.innerText = user.name;
 
-  let p = document.createElement('p');
-  p.innerText = user.age + ' ' + user.status;
+//   let p = document.createElement('p');
+//   p.innerText = user.age + ' ' + user.status;
 
-  userInfoDiv.append(h2, p);
-  // userInfoDiv.appendChild(p);
+//   userInfoDiv.append(h2, p);
+//   // userInfoDiv.appendChild(p);
 
-  document.body.appendChild(userInfoDiv);
-}
+//   document.body.appendChild(userInfoDiv);
+// }
+
+
+let target = document.querySelector(".target");
+// console.log(target);
+
+// target.onclick = function (e) {
+//   console.log(e);
+//   console.log('.');
+// }
+
+// target.onmouseover = function (e) {
+//   console.log(e);
+// }
+
+// target.onmousemove = function (e) {
+//   console.log(e.clientX);
+// }
+
+let f1 = document.forms.f1;
+// f1.login.oninput = function (e) {
+//  let value = this.value
+//   console.log(value);
+//   if (value.includes('sdfsd')) {
+//     alert('!!!!!!!!!!')
+//   }
+  // target.innerText = this.value;
+// }
+
+// f1.onsubmit = function (e) {
+//   e.preventDefault;
+//   console.log(this.login.value);
+//   alert("submit");
+// }
+
+f1.addEventListener('submit', function (e) {
+  e.preventDefault();
+  console.log(".");
+})
+
+f1.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log(",");
+});
+
