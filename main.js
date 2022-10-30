@@ -1104,7 +1104,7 @@ let target = document.querySelector(".target");
 //   console.log(e.clientX);
 // }
 
-let f1 = document.forms.f1;
+// let f1 = document.forms.f1;
 // f1.login.oninput = function (e) {
 //  let value = this.value
 //   console.log(value);
@@ -1120,13 +1120,26 @@ let f1 = document.forms.f1;
 //   alert("submit");
 // }
 
-f1.addEventListener('submit', function (e) {
-  e.preventDefault();
-  console.log(".");
-})
+// f1.addEventListener('submit', function (e) {
+//   e.preventDefault();
+//   console.log(".");
+// })
 
-f1.addEventListener("submit", function (e) {
-  e.preventDefault();
-  console.log(",");
-});
+// f1.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   console.log(",");
+// });
+
+function explorer(htmlElement) {
+  console.log(htmlElement);
+  let children = htmlElement.children;
+  if (children.length !== 0) {
+    for (const child of children) {
+      explorer(child);
+      // console.log('inner element', child);
+    }
+  }
+}
+
+explorer(document.body);
 
