@@ -795,28 +795,63 @@
 
 // user.age = 100500;
 
-function userBilder(name, age) {
-  let user = { name, age };
-  return {
-    getName() {
-      return user.name;
-    },
-    getAge() {
-       return user.age;
-    },
-    setAge(age) {
-      if (age > 0 ) {
-        user.age = age
-      }
-    }
+// function userBilder(name, age) {
+//   let user = { name, age };
+//   return {
+//     getName() {
+//       return user.name;
+//     },
+//     getAge() {
+//        return user.age;
+//     },
+//     setAge(age) {
+//       if (age > 0 ) {
+//         user.age = age
+//       }
+//     }
+//   }
+// }
+
+// let bulder = userBilder("vasya", 22);
+// console.log(bulder);
+// console.log(bulder.getAge());
+// console.log(bulder.getName());
+
+// bulder.setAge(100)
+// console.log(bulder.getAge());
+
+// function User(name,age,status) {
+//   this.name = name;
+//   this.age = age;
+//   this.status = status;
+// }
+
+// let user1 = new User("sdas", 12, true);
+// let user2 = new User("vasya", 32, true);
+
+// function User(name, age, status, wife) {
+//   this.name = name;
+//   this.age = age;
+//   this.status = status;
+//   this.wife = wife;
+// }
+
+// let user1 = new User("sdas", 12, true, { name: 'dsfdf', age:22 });
+// console.log(user1);
+
+function User(name, age, status, wifeName, wifeAge) {
+  this.name = name;
+  this.age = age;
+  this.status = status;
+  this.wife = {
+    name: wifeName,
+    age:wifeAge
   }
+  this.greeting = function(){
+    console.log('hi');
+  }
+ 
 }
 
-let bulder = userBilder("vasya", 22);
-console.log(bulder);
-console.log(bulder.getAge());
-console.log(bulder.getName());
-
-bulder.setAge(100)
-console.log(bulder.getAge());
-
+let user1 = new User("sdas", 12, true, "dsfdf", 22);
+console.log(user1);
