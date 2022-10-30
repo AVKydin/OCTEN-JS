@@ -442,20 +442,20 @@
 
 // let s = str.concat('!!!');
 // console.log(s);
-// console.log(str.toLocaleUpperCase()); 
+// console.log(str.toLocaleUpperCase());
 
 // console.log(str.startsWith("hel"));
 
-// console.log(str.endsWith("hel")); 
+// console.log(str.endsWith("hel"));
 
 // console.log(str.substring(0, 7));
 // console.log(str.indexOf("o"));
 // console.log(str.lastIndexOf("o"));
 // console.log(str.indexOf("o", 5));
 // console.log(str.charAt(8));
-// console.log(str.replace('e', '!')); 
-// console.log(str.replaceAll("e", "!")); 
-// console.log(str.split(" ")); 
+// console.log(str.replace('e', '!'));
+// console.log(str.replaceAll("e", "!"));
+// console.log(str.split(" "));
 
 // let arr = [];
 // console.log(typeof(arr));
@@ -504,19 +504,19 @@
 // concat.includes(1);
 // console.log(concat.includes(1));
 
-let users = [
-  { name: "vasya", age: 31, status: false },
-  { name: "petya", age: 28, status: true },
-  { name: "kolya", age: 22, status: true },
-  { name: "olya", age: 27, status: false },
-  { name: "max", age: 23, status: true },
-  { name: "anya", age: 35, status: false },
-  { name: "oleg", age: 34, status: false },
-  { name: "andrey", age: 29, status: true },
-  { name: "masha", age: 40, status: true },
-  { name: "olya", age: 17, status: false },
-  { name: "max", age: 26, status: true },
-];
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
 
 // users.forEach(function (value) {
 //     console.log(value);
@@ -580,17 +580,40 @@ let users = [
 // console.log(reduce);
 
 
-function filter(array, callbackFn) {
-  let filterArr = [];
-  for (const arr of array) {
-    if (callbackFn(arr)) {
-      filterArr.push(arr);
-    }
+// function filter(array, callbackFn) {
+//   let filterArr = [];
+//   for (const arr of array) {
+//     if (callbackFn(arr)) {
+//       filterArr.push(arr);
+//     }
     
-  }
-  return filterArr;
+//   }
+//   return filterArr;
 
+// }
+
+// console.log(filter(users, (item) => item.status));
+// console.log(filter(users, (item) => item.age>30));
+
+// console.log("start");
+
+// try {
+//   console.log(a);
+// } catch (a){
+//   console.log(a);
+// } finally {
+//   console.log("finally block");
+// }
+
+// console.log("end");
+
+
+function calc(a, b) {
+  if (b == 0) {
+    throw new Error('b is 0')
+  }
+  return a / b;
 }
 
-console.log(filter(users, (item) => item.status));
-console.log(filter(users, (item) => item.age>30));
+calc(10, 0)
+
