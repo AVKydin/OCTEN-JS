@@ -1030,6 +1030,59 @@
 //   iterator.classList.add("sdf");
 // }
 
-console.log(document.forms.f1.userName);
-console.log(document.forms.f2.userEmail);
+// console.log(document.forms.f1.userName);
+// console.log(document.forms.f2.userEmail);
 
+// let h2 = document.createElement('h2');
+// h2.innerText = 'dsfsdf';
+// document.body.appendChild(h2)
+
+// let allUsersDiv = document.getElementsByClassName('users')[0]
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
+// for (const user of users) {
+//   let div = document.createElement('div');
+//   div.classList.add('user');
+//   div.innerText = user.name;
+//   allUsersDiv.appendChild(div);
+// }
+
+
+ let users = [
+  { name: "vasya", age: 31, status: false },
+  { name: "petya", age: 28, status: true },
+  { name: "kolya", age: 22, status: true },
+  { name: "olya", age: 27, status: false },
+  { name: "max", age: 23, status: true },
+  { name: "anya", age: 35, status: false },
+  { name: "oleg", age: 34, status: false },
+  { name: "andrey", age: 29, status: true },
+  { name: "masha", age: 40, status: true },
+  { name: "olya", age: 17, status: false },
+  { name: "max", age: 26, status: true },
+];
+
+for (const user of users) {
+  let userInfoDiv = document.createElement('div');
+  let h2 = document.createElement('h2');
+  h2.innerText = user.name;
+
+  let p = document.createElement('p');
+  p.innerText = user.age + ' ' + user.status;
+
+  userInfoDiv.append(h2, p);
+  // userInfoDiv.appendChild(p);
+
+  document.body.appendChild(userInfoDiv);
+}
