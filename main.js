@@ -693,21 +693,55 @@
 // let [a, , c] = nambers;
 // console.log(a, c);
 
-let users = [
-  { name: "vasya", age: 31, status: false },
-  { name: "petya", age: 28, status: true },
-  { name: "kolya", age: 22, status: true },
-  { name: "olya", age: 27, status: false },
-  { name: "max", age: 23, status: true },
-  { name: "anya", age: 35, status: false },
-  { name: "oleg", age: 34, status: false },
-  { name: "andrey", age: 29, status: true },
-  { name: "masha", age: 40, status: true },
-  { name: "olya", age: 17, status: false },
-  { name: "max", age: 26, status: true },
-];
+// let users = [
+//   { name: "vasya", age: 31, status: false },
+//   { name: "petya", age: 28, status: true },
+//   { name: "kolya", age: 22, status: true },
+//   { name: "olya", age: 27, status: false },
+//   { name: "max", age: 23, status: true },
+//   { name: "anya", age: 35, status: false },
+//   { name: "oleg", age: 34, status: false },
+//   { name: "andrey", age: 29, status: true },
+//   { name: "masha", age: 40, status: true },
+//   { name: "olya", age: 17, status: false },
+//   { name: "max", age: 26, status: true },
+// ];
 
-let [{name, age, status}, user2] = users;
+// let [{name, age, status}, user2] = users;
 
-console.log(name);
-console.log(user2);
+// console.log(name);
+// console.log(user2);
+
+// let user = {
+//   name: 'vasya',
+//   age: 123,
+// }
+
+// let user2 = user;
+// let user3 = {
+//   name: "vasya",
+//   age: 123,
+// };
+
+
+// console.log(user === user2);
+// console.log(user3 === user2);
+
+// let user = {
+//   name: 'vasya',
+//   age: 123,
+// }
+
+// let userCopy = { ...user }
+
+// console.log(userCopy === user);
+
+// userCopy.age = 0;
+// console.log(userCopy);
+// console.log(user);
+
+let numbers = [11, 22, 33];
+
+let numbers2 = [...numbers];
+
+console.log(numbers === numbers2);
