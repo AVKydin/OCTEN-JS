@@ -210,7 +210,9 @@
 // ];
 
 // for (const user of users) {
-//   console.log(user);
+//     console.log(user);
+//     console.log(user.name);
+    
 // }
 
 // let user = {
@@ -238,10 +240,10 @@
 // ];
 
 // for (const user of users) {
-//   console.log(user);
+//     console.log(user);
+//     let us = user;
 //   for (const filName in user) {
-   
-//   console.log(filName, user.filName);
+//     console.log(filName, us[filName]);
 //   }
 // }
 
@@ -261,7 +263,7 @@
 // let i = 0;
 
 // while (i < users.length) {
-//   console.log(users[i]);
+//     console.log(users[i]);
 //   i++;
 // }
 
@@ -455,49 +457,140 @@
 // console.log(str.replaceAll("e", "!")); 
 // console.log(str.split(" ")); 
 
-let arr = [];
-console.log(typeof(arr));
+// let arr = [];
+// console.log(typeof(arr));
 
 // arr[arr.length] = 'dasdfdfsd';
-arr.push('dsfsd');
-console.log(arr.push("dgfhfg"));
-console.log(arr.push("dgfhfg2"));
-console.log(arr.push("dgfhfg3"));
-console.log(arr.push("dgfhfg4"));
-console.log(arr.push("dgfhfg5"));
-console.log(arr);
+// arr.push('dsfsd');
+// console.log(arr.push("dgfhfg"));
+// console.log(arr.push("dgfhfg2"));
+// console.log(arr.push("dgfhfg3"));
+// console.log(arr.push("dgfhfg4"));
+// console.log(arr.push("dgfhfg5"));
+// console.log(arr);
 
-console.log( arr.pop());
-console.log(arr);
+// console.log( arr.pop());
+// console.log(arr);
 
-console.log(arr.unshift("!!!"));
-console.log(arr);
+// console.log(arr.unshift("!!!"));
+// console.log(arr);
 
-console.log(arr.shift("!!!"));
-console.log(arr);
+// console.log(arr.shift("!!!"));
+// console.log(arr);
 
 
-console.log(arr.join(';'));
+// console.log(arr.join(';'));
 
-let nums = [1, 2, 32];
+// let nums = [1, 2, 32];
 
-let concat = arr.concat(nums);
-console.log(concat);
+// let concat = arr.concat(nums);
+// console.log(concat);
 
-console.log(nums.reverse());
+// console.log(nums.reverse());
 
-console.log(concat);
+// console.log(concat);
 
-let slice = concat.slice(0, 4)
+// let slice = concat.slice(0, 4)
 // concat.slice(0,4)
-console.log(slice);
+// console.log(slice);
 
 // let splice = concat.splice(0,2, 'gdfgdf', 'hkjhhj,', 11111)
 // console.log(concat.splice(0));
 // console.log(splice);
-console.log(concat);
+// console.log(concat);
 
-console.log(concat.indexOf(1));
+// console.log(concat.indexOf(1));
 
-concat.includes(1);
-console.log(concat.includes(1));
+// concat.includes(1);
+// console.log(concat.includes(1));
+
+let users = [
+  { name: "vasya", age: 31, status: false },
+  { name: "petya", age: 28, status: true },
+  { name: "kolya", age: 22, status: true },
+  { name: "olya", age: 27, status: false },
+  { name: "max", age: 23, status: true },
+  { name: "anya", age: 35, status: false },
+  { name: "oleg", age: 34, status: false },
+  { name: "andrey", age: 29, status: true },
+  { name: "masha", age: 40, status: true },
+  { name: "olya", age: 17, status: false },
+  { name: "max", age: 26, status: true },
+];
+
+// users.forEach(function (value) {
+//     console.log(value);
+
+// });
+
+// users.forEach((value) => console.log(value));
+
+// let filteredUser = users.filter(value => value.age > 30);
+// console.log(filteredUser);
+// console.log(users);
+
+// let mapsUsers = users.map(function (value, index) {
+//     return {...value, id: index+1
+//         // name: value.name,
+//         // age: value.age,
+//         // status: value.status,
+//         // id: index + 1
+//     };
+// })
+// console.log(mapsUsers);
+
+
+// users.map((value, index) => {return{id: index + 1,name:value.name,age:value.age,status:value.status}})
+
+// let find = users.find(value => value.name === 'max');
+// console.log(find);
+
+// console.log(users.every((value) => value.status));
+// console.log(users.some((value) => value.status));
+
+
+// let sort = users.sort((a, b) => {
+//     return a.age - b.age;
+// })
+// console.log(sort);
+
+// let sort = users.sort((a, b) => {
+//     if (a.name > b.name) {
+//         return 1;
+//     }
+//     if (a.name < b.name) {
+//         return -1;
+//     }
+//     if (a.name === b.name) {
+//       return 0;
+//     }
+// })
+// console.log(sort);
+
+// let reduce = users.reduce((previousValue, user) => {
+//   if (user.status) {
+//     previousValue.statT.push(user);
+//   } else {
+//     previousValue.statF.push(user);
+
+//   }
+//   return previousValue;
+  
+// }, { statT: [], statF: [] });
+// console.log(reduce);
+
+
+function filter(array, callbackFn) {
+  let filterArr = [];
+  for (const arr of array) {
+    if (callbackFn(arr)) {
+      filterArr.push(arr);
+    }
+    
+  }
+  return filterArr;
+
+}
+
+console.log(filter(users, (item) => item.status));
+console.log(filter(users, (item) => item.age>30));
