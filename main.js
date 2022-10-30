@@ -885,19 +885,71 @@
 // console.log(user.greeting.call(user2, "hello"));
 
 
-function User(name, age, status) {
+// function User(name, age, status) {
+//   this.name = name;
+//   this.age = age;
+//   this.status = status;
+// }
+
+// let user = new User("vasya", 33);
+
+// user.greeting = msg=> {
+//   return `${msg} my name is ${this.name}`;
+// };
+
+// let user2 = new User("dima", 44);
+
+// let greetingCopy = user.greeting.bind(user2);
+// console.log(greetingCopy('ky-ky'));
+
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+  // static greeting() {
+  //   console.log(this);
+  //   return `hello my name is ${this.name}`;
+  // }
+
+//    work() {
+    
+//     return `work in process`;
+//   }
+// }
+
+// let user = new User('vasya', 22);
+// console.log(user);
+
+// console.log(user.greeting());
+
+// console.log(User.greeting());
+
+// class Customer extends User{
+//   constructor(username, age, password) {
+//     super(username, age);
+//     this.password = password;
+//     }
+// }
+
+// let customer = new Customer("vasya", 31, "111");
+// console.log(customer);
+
+
+// console.log(customer.work());
+
+
+function User(name, age) {
   this.name = name;
   this.age = age;
-  this.status = status;
 }
 
-let user = new User("vasya", 33);
+function Customer(name, age, password) {
+  User.apply(this, arguments)
+  this.password = password;
+}
+let customer = new Customer('vasya', 44, '4534534')
 
-user.greeting = msg=> {
-  return `${msg} my name is ${this.name}`;
-};
+console.log(customer);
 
-let user2 = new User("dima", 44);
-
-let greetingCopy = user.greeting.bind(user2);
-console.log(greetingCopy('ky-ky'));
