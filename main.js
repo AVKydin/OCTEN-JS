@@ -940,16 +940,55 @@
 // console.log(customer.work());
 
 
-function User(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function User(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-function Customer(name, age, password) {
-  User.apply(this, arguments)
-  this.password = password;
-}
-let customer = new Customer('vasya', 44, '4534534')
+// function Customer(name, age, password) {
+//   User.apply(this, arguments)
+//   this.password = password;
+// }
+// let customer = new Customer('vasya', 44, '4534534')
 
-console.log(customer);
+// console.log(customer);
 
+
+                        // Об'єктна модель документа DOM та пошук по ній
+
+
+// DOM
+
+// console.log(document.head);
+// console.log(document.head.children);
+// console.log(document.body.innerHTML);
+
+// let ul1 = document.getElementById('list1')
+// console.log(ul1);
+
+// let ul1 = document.getElementsByClassName('menu')
+// console.log(ul1);
+
+// for (const iterator of ul1) {
+//   console.log(iterator);
+// }
+
+// let li = document.getElementsByTagName("li");
+// console.log(li);
+
+// let list = document.getElementById('list1')
+// console.log(list);
+
+// let li = list.getElementsByTagName('li');
+// console.log(li);
+
+// console.log(document.querySelector("body .menu"));
+// console.log(document.querySelectorAll("body .menu"));
+
+// let nodeListOf = document.querySelectorAll("#list2>li")
+// console.log(nodeListOf);
+
+// for (const i of nodeListOf) {
+// console.log(i);
+
+// }
