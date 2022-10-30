@@ -746,13 +746,13 @@
 
 // console.log(numbers === numbers2);
 
-let user = {
-  name: 'vasya',
-  skills: ['html', 'js'],
-  greet: function () {
+// let user = {
+//   name: 'vasya',
+//   skills: ['html', 'js'],
+//   greet: function () {
     
-  },
-};
+//   },
+// };
 
 // let userClone = {...user}
 
@@ -767,8 +767,56 @@ let user = {
 // console.log(user);
 // console.log(user.skills === parse.skills);
 
-let assign = Object.assign({}, user);
-console.log(assign);
-console.log(assign === user);
-console.log(assign.skills === user.skills);
+// let assign = Object.assign({}, user);
+// console.log(assign);
+// console.log(assign === user);
+// console.log(assign.skills === user.skills);
+
+
+// function asd() {
+//   let x = 10;
+
+//   function inner() {
+//     return ++x;
+//   }
+//   return inner;
+// }
+
+// let foo = asd()
+
+// console.log(foo());
+
+
+// let user = {
+//   name: 'vasya',
+//   age: 22,
+
+// }
+
+// user.age = 100500;
+
+function userBilder(name, age) {
+  let user = { name, age };
+  return {
+    getName() {
+      return user.name;
+    },
+    getAge() {
+       return user.age;
+    },
+    setAge(age) {
+      if (age > 0 ) {
+        user.age = age
+      }
+    }
+  }
+}
+
+let bulder = userBilder("vasya", 22);
+console.log(bulder);
+console.log(bulder.getAge());
+console.log(bulder.getName());
+
+bulder.setAge(100)
+console.log(bulder.getAge());
 
