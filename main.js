@@ -740,8 +740,35 @@
 // console.log(userCopy);
 // console.log(user);
 
-let numbers = [11, 22, 33];
+// let numbers = [11, 22, 33];
 
-let numbers2 = [...numbers];
+// let numbers2 = [...numbers];
 
-console.log(numbers === numbers2);
+// console.log(numbers === numbers2);
+
+let user = {
+  name: 'vasya',
+  skills: ['html', 'js'],
+  greet: function () {
+    
+  },
+};
+
+// let userClone = {...user}
+
+// console.log(user === userClone);
+// console.log(user.skills === userClone.skills);
+
+// let userJsonClone = JSON.stringify(user);
+// console.log(userJsonClone);
+
+// let parse = JSON.parse(userJsonClone);
+// console.log(parse);
+// console.log(user);
+// console.log(user.skills === parse.skills);
+
+let assign = Object.assign({}, user);
+console.log(assign);
+console.log(assign === user);
+console.log(assign.skills === user.skills);
+
