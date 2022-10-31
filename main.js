@@ -1130,16 +1130,28 @@ let target = document.querySelector(".target");
 //   console.log(",");
 // });
 
-function explorer(htmlElement) {
-  console.log(htmlElement);
-  let children = htmlElement.children;
-  if (children.length !== 0) {
-    for (const child of children) {
-      explorer(child);
-      // console.log('inner element', child);
+// function explorer(htmlElement) {
+//   console.log(htmlElement);
+//   let children = htmlElement.children;
+//   if (children.length !== 0) {
+//     for (const child of children) {
+//       explorer(child);
+//       // console.log('inner element', child);
+//     }
+//   }
+// }
+
+// explorer(document.body);
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => response.json())
+  .then(users => {
+    for (const user of users) {
+      let div = document.createElement('div');
+      div.innerText = `${user.id} ${user.name}`;
+      document.body.appendChild(div);
+      console.log(user);
     }
-  }
-}
-
-explorer(document.body);
-
+  });
+  
+  
