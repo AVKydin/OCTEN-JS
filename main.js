@@ -1156,19 +1156,39 @@ let target = document.querySelector(".target");
   
 
 
-document.cookie = 'name=kokos'
-console.log(document.cookie);
-document.cookie = "id=101";
-console.log(document.cookie);
+// document.cookie = 'name=kokos'
+// console.log(document.cookie);
+// document.cookie = "id=101";
+// console.log(document.cookie);
 
 
-let cookies = document.cookie.split(';')
-let obj = {};
-for (let index = 0; index < cookies.length; index++) {
-  let cookie = cookies[index].split('=');
-  obj[cookie[0]] = cookie[1];
-}
-console.log(obj);
+// let cookies = document.cookie.split(';')
+// let obj = {};
+// for (let index = 0; index < cookies.length; index++) {
+//   let cookie = cookies[index].split('=');
+//   obj[cookie[0]] = cookie[1];
+// }
+// console.log(obj);
   
-document.cookie = "name=";
+// document.cookie = "name=";
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => response.json())
+  .then(users => {
+    for (const user of users) {
+      let div = document.createElement('div');
+      div.innerText = `${user.id} ${user.name}`;
+      let a = document.createElement('a');
+      a.href = `posts.html?id=${user.id}`;
+      a.innerText = ' posts of user';
+      div.appendChild(a);
+
+
+      document.body.appendChild(div);
+      console.log(user);
+
+    
+    }
+  });
 
