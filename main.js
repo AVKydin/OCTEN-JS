@@ -1173,22 +1173,35 @@ let target = document.querySelector(".target");
 // document.cookie = "name=";
 
 
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then(response => response.json())
-  .then(users => {
-    for (const user of users) {
-      let div = document.createElement('div');
-      div.innerText = `${user.id} ${user.name}`;
-      let a = document.createElement('a');
-      a.href = `posts.html?id=${user.id}`;
-      a.innerText = ' posts of user';
-      div.appendChild(a);
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(response => response.json())
+//   .then(users => {
+//     for (const user of users) {
+//       let div = document.createElement('div');
+//       div.innerText = `${user.id} ${user.name}`;
+//       let a = document.createElement('a');
+//       a.href = `posts.html?id=${user.id}`;
+//       a.innerText = ' posts of user';
+//       div.appendChild(a);
 
 
-      document.body.appendChild(div);
-      console.log(user);
+//       document.body.appendChild(div);
+//       console.log(user);
 
     
-    }
-  });
+//     }
+//   });
 
+fetch("https://jsonplaceholder.typicode.com/posts", {
+  method: "POST",
+  body: JSON.stringify({
+    title: "foo",
+    body: "bar",
+    userId: 1,
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8",
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
