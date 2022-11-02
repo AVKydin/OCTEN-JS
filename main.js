@@ -1192,16 +1192,51 @@ let target = document.querySelector(".target");
 //     }
 //   });
 
-fetch("https://jsonplaceholder.typicode.com/posts", {
-  method: "POST",
-  body: JSON.stringify({
-    title: "foo",
-    body: "bar",
-    userId: 1,
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// console.log(localStorage);
+
+// localStorage.setItem('asd', 'qwe');
+// let value = localStorage.getItem('asd')
+// console.log(value);
+
+// localStorage.clear();
+
+// console.log(localStorage.getItem("lastUser"));
+
+let usersDiv = document.getElementsByClassName('users')[0];
+let user = JSON.parse(localStorage.getItem('lastUser'));
+if (user){
+  let p = document.querySelector('.last-user>p');
+  p.innerText = `${user.id} - ${user.name}`
+}
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => response.json())
+  .then(users => {
+    for (const user of users) {
+      let div = document.createElement('div');
+      div.innerText = `${user.id} ${user.name}`;
+      let a = document.createElement('a');
+      a.href = `posts.html?data=${JSON.stringify(user)}`;
+      a.innerText = ' posts of user';
+      div.appendChild(a);
+      usersDiv.appendChild(div);
+
+      // console.log(user);
+    }
+  });
+
+  
